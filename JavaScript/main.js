@@ -22,6 +22,8 @@ datos.innerHTML = `<h1>Soy la caja de datos</h1>
 
 `;
 
+
+
 //Condicionales
 if(altura >=190){
     datos.innerHTML += '<h1>Eres una persona alta</h1>';
