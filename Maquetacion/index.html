@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conagon</title>
     <link rel="stylesheet" href="assets/css/styles.css"/>
+
+    <!--LEER EL ESCRIPT CUANDO CARGUE TODO EL DOOM-->
+    <script type="text/javascript">
+        window.addEventListener("load", function(event){
+            var template = document.getElementById('article-template');
+            var articles = document.getElementById("articles");
+
+            for(var i = 1; i<5; i++){
+                var clonado = template.cloneNode(true);
+                clonado.removeAttribute("id");
+                var h2 = clonado.getElementsByTagName("h2")[0];
+                h2.innerHTML = h2.textContent + ' ' + i;
+                articles.appendChild(clonado)
+            }
+        });
+        
+    </script>
 </head>
 <body>
         <header id="header">
@@ -21,10 +38,10 @@
                 <!-- MENU -->
                 <nav id="menu">
                     <ul>
-                        <li><a href="">Inicio</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Formulario</a></li>
-                        <li><a href="">Pagina 1</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="formulario.html">Formulario</a></li>
+                        <li><a href="biografia.html">Biografia</a></li>
                         <li><a href="">Pagina 2</a></li>
                     </ul>
                 </nav>
@@ -42,13 +59,28 @@
 
         <div class="center">
             <section id="content">
-                <h2>Ultimos artículos</h2>
+                <h2 class="subheader">Últimos artículos</h2>
                 <!--Listado articulos-->
+                <div id="articles">
+                    <article class="article-item" id="article-template">
+                        <div class="image-wrap">
+                            <img src="assets/imagenes/moog.jpg" alt="Robert Moog"/>  
+                        </div>
+                        <h2>Articulo de prueba</h2>
+                        <span class="date">
+                            hace 5 minutos
+                        </span>
+                        <a href="#">Leer mas</a>
+                        <!--LIMPIAR FLOTADOS-->
+                         <div class="clearfix"></div>
+                    </article>
+                </div>
             </section>
-            <aside id="siderbar">
+            <!--Script para artiulos-->
+            <aside id="sidebar">
                 <div id="nav-blog" class="sidebar-item">
                     <h3>Puedes hacer esto</h3>
-                    <a href="#">Crear artiuclo</a>
+                    <a href="#" class="btn btn-success">Crear artiuclo</a>
                 </div>
 
                 <div id="search" class="sidebar-item">
@@ -56,15 +88,20 @@
                     <p>Encuentra el articulo que buscas</p>
                     <form>
                         <input type="text" name="search"/>
-                        <input type="submit" name="submit" value="Buscar"/>
+                        <input type="submit" name="submit" value="Buscar" class="btn"/>
                     </form>
                 </div>
             </aside>
+            <!--LIMPIAR FLOTADOS-->
+            <div class="clearfix"></div>
         </div>
 
         <!--Foter-->
-        <footer>
-            <div class="footer"></div>
+        <footer id="footer">
+            <div class="center"></div>
+                <p>
+                    &copy; <strong>CONAGON SYNTH</strong>
+                </p>
         </footer>
     </body>
 </html>

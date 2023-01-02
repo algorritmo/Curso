@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conagon</title>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+
+        
+    </script>
+</head>
+<body>
+        <header id="header">
+            <div class="center">
+                <!--LOGO-->
+                <div id="logo">
+                    <img class="app-logo" src="assets/imagenes/sinte-icono.png"  alt="Logotipo"/>
+                    <span id="brand">
+                            <strong>Conagon</strong>Synth
+                    </span>
+                </div>
+                
+                <!-- MENU -->
+                <nav id="menu">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="formulario.html">Formulario</a></li>
+                        <li><a href="biografia.html">Biografia</a></li>
+                        <li><a href="">Pagina 2</a></li>
+                    </ul>
+                </nav>
+
+                <!--LIMPIAR FLOTADOS-->
+                <div class="clearfix"></div>
+
+            </div>
+        </header>
+        <div class="center">
+            <section id="content">
+                <h1 class="subheader">Formulario</h1>
+                <form class="mid-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Biografia</label> <br/>
+                        <textarea type="text" name="bio"></textarea> 
+                    </div>
+
+                    <div class="form-group radiobuttons">
+                        <label class="text-genero">Genero</label> <br/>
+                        <input type="radio" name="genero" value="hombre"/> Hombre 
+                        <input type="radio" name="genero" value="mujer"/> Mujer 
+                        <input type="radio" name="genero" value="otro"/> Otro
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <input type="submit" value="Enviar" class="btn btn-success"/>
+                    </div>
+                    
+                </form>
+            </section>
+            <!--Script para artiulos-->
+            <aside id="sidebar">
+                <div id="nav-blog" class="sidebar-item">
+                    <h3>Puedes hacer esto</h3>
+                    <a href="#" class="btn btn-success">Crear artiuclo</a>
+                </div>
+
+                <div id="search" class="sidebar-item">
+                    <h3>Buscador</h3>
+                    <p>Encuentra el articulo que buscas</p>
+                    <form>
+                        <input type="text" name="search"/>
+                        <input type="submit" name="submit" value="Buscar" class="btn"/>
+                    </form>
+                </div>
+            </aside>
+            <!--LIMPIAR FLOTADOS-->
+            <div class="clearfix"></div>
+        </div>
+
+        <!--Foter-->
+        <footer id="footer">
+            <div class="center"></div>
+                <p>
+                    &copy; <strong>CONAGON SYNTH</strong>
+                </p>
+        </footer>
+    </body>
+</html>

@@ -133,6 +133,147 @@ body{
     color: #6664ff;
 }
 
+#content{
+    width: 70%;
+    float:left;
+    min-height: 450px;
+    margin-right: 20px;
+}
+
+#sidebar{
+   width: 25%;
+   float:left;
+}
+
+.sidebar-item{
+    background: #f7f7f7;
+    padding: 20px;
+    margin-top: 30px
+}
+
+.sidebar-item h3{
+    text-transform: uppercase;
+    font-size:18px;
+    margin: 0px; 
+    padding-bottom: 10px;
+    margin-bottom:10px;
+    border-bottom: 3px solid rgb(208, 202, 202);
+
+}
+
+.sidebar-item .btn{
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+.btn{
+    display: block;
+    background: black;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    max-width: 120px;
+    transition: 300ms all;
+    border: none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background: #db46fc;
+    color: black;
+}
+
+.mid-form{
+    width: 50%;
+    margin: 0px auto;
+}
+
+
+
+/*SELECTOR DE ATRIBUTO (input del buscador)*/
+input[type="text"], textarea{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: 300ms all;
+}
+
+input[type="text"]:focus, textarea{
+    box-shadow: 0px 0px 3px #db46fc inset;
+}
+
+#footer{
+    background: #f7f7f7;
+    height: 150px;
+    width: 100%;
+    height:  70px;
+    line-height: 70px;
+    color: #444; 
+}
+
+#footer p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.article-item{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.article-item .image-wrap{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    float:left;
+    margin-right: 15px; 
+    border: 1px solid #ccc;   
+}
+
+.article-item .image-wrap img{
+    height: 100%;
+    text-align: center;
+}
+
+.article-item h2{
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: -5px;
+    margin-bottom: 7px;   
+}
+
+.article-item .date{
+    display: block;
+    width: 100%;
+    color: rgb(134, 133, 133);
+}
+
+.article-item a{
+    display: block;
+    color:#444;
+    text-decoration: none;
+    margin-top: 55px;
+}
+
+.article-item a:hover{
+    text-decoration: #db46fc underline;
+}
+
+.subheader{
+    font-size: 38px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
 /*CSS PARA LA PAG BLOG*/
 
 #slider.slider-small{
@@ -143,5 +284,176 @@ body{
     margin-top: 0.2px;
     padding: 0px;
     padding-top: 50px;
+}
+
+/*CSS PARA LA PAG DETALLE ARTICULOS*/
+
+.article-detail .image-wrap{
+    float:none;
+    width: 100%;
+    height: 500px;
+}
+
+.article-detail .image-wrap img{
+    width: 100%;
+    height: auto;
+}
+
+.article-detail .image-article img{
+    float:left;
+    width: 100%;
+    height: auto;
+    margin-right: 15px; 
+    border: 1px solid #ccc; 
+}
+
+.article-detail .subheader{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+
+/** CSS PARA PAGINA FORMULARIOS*/
+
+.mid-form label{
+    display: block;
+    float: left;
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+textarea{
+    width: 100%;
+    height: 150px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+    
+}
+
+.radiobuttons{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    float: center;
+
+}
+
+
+/*responsive*/
+/*Desde la anchura 0px hasta la anchura 1488px de pantalla*/
+@media (max-width: 1490px) {
+    .center{
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 1314px) {
+    .center{
+        width: 95%;   
+    }
+
+    #menu ul{
+        width: auto;
+    }
+
+}
+
+@media (max-width: 797px) {
+    #logo{
+        float:none;
+        width: 240px;
+        margin: 8px auto;
+        margin-top: 20px;
+    }
+
+    #menu,
+    #menu ul{
+        clear:both;
+        float: none;
+        width:  100%;
+        margin: 0px;
+        padding: 0px;
+        line-height: 43px;
+    }
+
+    #content{
+        float: none;
+        width: 100%;
+    }
+
+    #sidebar{
+        float: none;
+        width: 60%;
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+
+    #slider h1{
+        padding-top: 115px;
+        font-size: 25px;
+    }
+
+    .mid-form{
+        width: 70%;
+    }
+
+@media (max-width: 495px) {
+    #header{
+        min-height: 130px;
+        overflow: hidden;
+    }
+
+    #menu,
+    #menu ul{
+        line-height: 50px;
+    }
+
+    #menu,
+    #menu ul li{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    #slider{
+        height: 180px;
+    }
+
+    #slider h1{
+        font-size: 19px;
+        padding-top: 30px;
+    }
+
+    #slider .btn-white{
+        margin-top: 20px;
+    }
+
+    #slider.slider-small{
+        height: 100px;
+    }
+    
+    #slider.slider-small h1{
+        padding-top: 35px;
+    }
+
+    }
+
+}
+
+/*CSS PARA BIOGRAFIA*/
+
+#div-audio{
+    display: flex;
+    padding-top: 50px;
+    text-align: left;
+}
+
+#div-audio .audio-cont{
+    text-align: 50px;
+    
 }
 
