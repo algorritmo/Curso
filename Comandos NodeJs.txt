@@ -1,0 +1,11 @@
+COMANDOS NODE JS BASH
+
+1) Para iniciar Node en una carpeta
+    npm init
+   
+2) INSTALAR PAQUETES
+	npm install --save						//Expres es un framweork de node js que nos permite trabajar con Protocolo HTTP y rutas, Gestioina las peticiones JSON
+	npm installe express    				//instala la libreria express
+	npm install --save body-parser  		//Cuando se le envia un body parcer como peticion HTTP los parametros que uno le envia los convierte  a JSON (Objeto usado por JS)
+	npm install --save mongoose  			//Libreria para gestionar las peticiones a Mongo db
+	npm install --save connect-multiparty   //Libreria que coge un dato de tipo archivo y lo procesa y lo guarda

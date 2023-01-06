@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Api RESTful del curso para master en FrameWors",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algorritmo/Curso.git"
+  },
+  "author": "Juan Camilo Aragon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/algorritmo/Curso/issues"
+  },
+  "homepage": "https://github.com/algorritmo/Curso#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.2",
+    "node": "^19.3.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
