@@ -9,7 +9,7 @@ const { REPL_MODE_SLOPPY } = require("repl");
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ArticleShema = Shema({
+var ArticleShema = Schema({
     title: String,
     content: String,
     date: {type: Date, default: Date.now},

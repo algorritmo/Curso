@@ -2,6 +2,8 @@
 
 'use strict'
 
+var validator = require('validator');
+var Article = require('../models/article-model');
 
 var controller ={
     datosCurso: (req, res) => {
@@ -29,19 +31,29 @@ var controller ={
     save: (req, res) => {
         //Recogemos los aprametreos por post (lo que el usuario nos enviar por la peticion)
         var params = req.body;
-        console.log(params);
-
+      
         //Validar Datos (validator)
+        try{
+            var validate_title = !validator.isEmpty(params.title);
+            var validate_content = !validator.isEmpty(params.content);
+        }catch(err){
+            return res.status(200).send({
+                message: 'Faltan datos por enviar'
+            });
+        }
 
-        //Crear el objeto que vamos a guardar
+        if(validate_title && validate_content){
+            return res.status(200).send({
+                message: 'Validacion correcta'
+            }); 
+        }
+
+        //Crear el objeto que vamos a guardar 
 
         //Asignamos valores al objeto
 
         // Guardarmos el articulo
 
-        return res.status(200).send({
-            message: 'soy la accion save'
-        });
     }
 
 
