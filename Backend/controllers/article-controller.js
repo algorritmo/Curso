@@ -43,17 +43,76 @@ var controller ={
         }
 
         if(validate_title && validate_content){
+            
+            //Crear el objeto que vamos a guardar 
+            var  article = new Article();
+
+            //Asignamos valores al objeto
+            article.title = params.title;
+            article.content = params.content;
+            //fecha se guarda automatica
+            article.image = null;
+        
+
+            // Guardarmos el articulo
+            article.save((err, articleStored) => {
+
+                if(err || !articleStored){
+                    return res.status(400).send({
+                        status: 'error',
+                        message: 'Articulo no se ha guardado!!!'
+                    }); 
+                }
+                //Devolver el articulo
+                return res.status(200).send({
+                    status: 'success',
+                    article: articleStored
+                }); 
+            });
+
+
+           
+
+        }else{
             return res.status(200).send({
-                message: 'Validacion correcta'
-            }); 
+                status: 'error',
+                message: 'Los datos no son validos'
+            });
         }
 
-        //Crear el objeto que vamos a guardar 
+    },
 
-        //Asignamos valores al objeto
+    //METODO PARA RETORNAR TODOS LOS ARTICULOS DE LA BD
 
-        // Guardarmos el articulo
+    getArticles: (req, res) => {
 
+        
+
+        Article.find({}).sort('-_id').exec((err, articles) => {
+            if(err){
+                return res.status(500).send({
+                    status: 'error',
+                    message: 'Error al devolver articulos'
+
+                }); 
+            }
+
+            if(!articles){
+                return res.status(404).send({
+                    status: 'error',
+                    message: 'Error al devolver articulos'
+
+                }); 
+            }
+
+
+            return res.status(200).send({
+                status: 'succes',
+                articles
+            }); 
+        });
+
+        
     }
 
 

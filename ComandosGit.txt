@@ -1,0 +1,38 @@
+	GIT BASH COMANDOS
+
+1) PARA VER LA VERSION
+   git --version
+
+2) CONFIGURACION
+   git config --global user.name "Juan Camilo" 					//ponerle nombre
+   git config --global user.email "aragon.juan@correounivalle.edu.co"   //ponerle email
+   git config --global core.editor "code --wait" 				//ponerle vs studio code y que se cierre cuando se cierre el editor
+   git config --global -e 								//para ver la configuracion global
+   git config --global core.autocrlf true 					// para eliminar el salto de linea CR en windows
+   git config -h 										//listado de las configuraciones
+
+3) COMANDOS
+   NAVEGACION:
+   ls       		 	        //para ver carpetas
+   ls -a    		 		  //para ver carpetas ocultas
+   pwd      		 	        //para ver en que direccion estamos
+   cd / cd..				  // para entrar a la carpeta deseada o salir
+   mkdir NOMBRE 		 		  // para crear carpeta	    
+   git init              		  //SIRVE PARA INICIAR LA CARPETA DEL PROYECTO COMO UN REPOSITORIO QUE SE GESTIONARA EN GIT
+   code .  		      		  // para abrir la carpeta en la que estamos en el editor de codigo (VS)
+   git status o git sattus -s 	  // el estado de nuestro repositorio 
+   git add NOMBRE.css o git add.	 		  // para agregar al stage los cambios que deseamos comitear	
+   git commit -m "Nombre del commit"  //Sirve para hacer commit a los archivos listos
+   git rm "NOMBRE"   			  // Para eliminar el archivo
+   git restore --staged "NOMBRE"      // Sacar un cambio de la etapa de staged   
+   git diff o git diff --stager	  // para ver cambios
+   git log o git log --oneline        // historial de comits
+   cat "NOMBRE.txt"			  //Muestra el contenido del archivo
+
+4) CREAR RAMAS
+   git branche				  //para saber en que rama estamos
+   git checkout -b "NOMBRE"           //para crear o entrar a una rama
+
+5) coger cambios del servidor
+   git pull  // trae los cambios que haya remotos en la rama que estamos
+   git pull origin master //trae los cambios que hayan en otras ramas al repositorio local
