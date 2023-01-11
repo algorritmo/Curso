@@ -9,3 +9,4 @@ COMANDOS NODE JS BASH
 	npm install --save body-parser  		//Cuando se le envia un body parcer como peticion HTTP los parametros que uno le envia los convierte  a JSON (Objeto usado por JS)
 	npm install --save mongoose  			//Libreria para gestionar las peticiones a Mongo db
 	npm install --save connect-multiparty   //Libreria que coge un dato de tipo archivo y lo procesa y lo guarda
+	npm install --save validator					//El validator, validar peticiones en el backend
